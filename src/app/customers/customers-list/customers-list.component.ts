@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersListComponent implements OnInit {
 
-  constructor() { }
+    filteredCustomers: any[] = [];
+    customersOrderTotal: number;
+    currencyCode: string = 'USD';
+    
+    constructor() {}
+    
+    ngOnInit() {
 
-  ngOnInit(): void {
-  }
-
+    }
 }
