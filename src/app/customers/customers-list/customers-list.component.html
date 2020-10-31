@@ -12,7 +12,7 @@
     <tr *ngFor="let cust of filteredCustomers">
         <td>
             <a>
-                {{ cust.name }}
+                {{ cust.name | titlecase }}
             </a>
         </td>
         <td>{{ cust.city }}</td>
