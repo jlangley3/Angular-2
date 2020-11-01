@@ -11,8 +11,8 @@
     </thead>
     <tr *ngFor="let cust of filteredCustomers">
         <td>
-            <a>
-                {{ cust.name | titlecase }}
+            <a [routerLink]="['/orders', cust.id]">
+                {{ cust.name | capitalize }}
             </a>
         </td>
         <td>{{ cust.city }}</td>
@@ -21,7 +21,7 @@
     <tr *ngIf="filteredCustomers && filteredCustomers.length">
         <td colspan="2">&nbsp;</td>
         <td>
-            {{ customersOrderTotal | currency:currencyCode:'symbol'}}
+            {{ customersOrderTotal | currency:currencyCode:'symbol'  }}
         </td>
     </tr>
     <tr *ngIf="!filteredCustomers || !filteredCustomers.length">
